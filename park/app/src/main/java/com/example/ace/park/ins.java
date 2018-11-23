@@ -133,7 +133,7 @@ public class ins extends AppCompatActivity {
         // initialize the necessary libraries
         initvar();
         init();
-
+// adding elements to spinner
         String [] values =
                 {"Private","Public"};
         final Spinner spinner = (Spinner) findViewById(R.id.insType);
@@ -154,7 +154,7 @@ public class ins extends AppCompatActivity {
             }
         });
 
-
+// code to select image
 
         choose.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -162,6 +162,9 @@ public class ins extends AppCompatActivity {
                 showPictureDialog();
             }
         });
+        
+        // code to upload data and image
+        
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -199,7 +202,7 @@ public class ins extends AppCompatActivity {
         });
 
     }
-
+// code to upload bitmap image other way is to upload throid filepath(URI) also here image can be compressed
     private void uploadImage(int count,Bitmap bmp) {
 
         if(bmp!=null) {
@@ -238,7 +241,9 @@ public class ins extends AppCompatActivity {
                 }
             });
         }
-     /*   if(filePath!=null)
+     /* 
+        uploading using file path
+     if(filePath!=null)
         {
             final ProgressDialog progressDialog = new ProgressDialog(ins.this);
             progressDialog.setTitle("Uploading....");
@@ -278,7 +283,7 @@ public class ins extends AppCompatActivity {
 */
 
     }
-
+// complete action using gallery or camera
     private void showPictureDialog(){
         AlertDialog.Builder pictureDialog = new AlertDialog.Builder(this);
         pictureDialog.setTitle("Select Action");
@@ -302,6 +307,8 @@ public class ins extends AppCompatActivity {
         pictureDialog.show();
     }
 
+    // select from gallery
+    
     public void choosePhotoFromGallary() {
         Intent galleryIntent = new Intent(Intent.ACTION_PICK,
                 android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
@@ -309,6 +316,8 @@ public class ins extends AppCompatActivity {
         startActivityForResult(galleryIntent, GALLERY);
     }
 
+    // select from camera
+    
     private void takePhotoFromCamera() {
         Intent intent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(intent, CAMERA);
@@ -325,6 +334,8 @@ public class ins extends AppCompatActivity {
 
     }
 
+    // select image comes here in form of data 
+    
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -361,7 +372,7 @@ public class ins extends AppCompatActivity {
 
             }
 
-
+// code for location
 
         switch (requestCode) {
             // Check for the integer request code originally supplied to startResolutionForResult().
@@ -379,7 +390,7 @@ public class ins extends AppCompatActivity {
                 break;
         }
     }
-
+// variable init
     void initvar(){
 
         storage = FirebaseStorage.getInstance();
@@ -394,6 +405,9 @@ public class ins extends AppCompatActivity {
         req = database.getReference();
 
     }
+    
+    // location init
+    
     private void init() {
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         mSettingsClient = LocationServices.getSettingsClient(this);
