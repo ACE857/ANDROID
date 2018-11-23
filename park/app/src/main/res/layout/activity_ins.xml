@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ins">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:scrollbars="vertical"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+>
+
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/insName"
+        android:hint="@string/parking_space_name"
+        android:inputType="text"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        />
+        <Button
+            android:layout_width="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/loc"
+            android:drawableLeft="@drawable/ic_my_location_black_24dp"
+            />
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/insNum"
+        android:hint="@string/number_of_spaces"
+        android:layout_marginTop="50dp"
+        android:inputType="number"
+        android:layout_gravity="center"
+        />
+    <Spinner
+        android:layout_marginTop="50dp"
+        android:id="@+id/insType"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <Button
+        android:layout_marginTop="50dp"
+        android:text="@string/select_image"
+        android:id="@+id/insPhoUp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="300dp"
+        android:id="@+id/insPhoto"
+        android:layout_marginTop="50dp"
+        />
+
+    <Button
+        android:layout_marginTop="50dp"
+        android:text="@string/submit"
+        android:id="@+id/insSub"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        />
+
+    </LinearLayout>
+</ScrollView>
+    </RelativeLayout>

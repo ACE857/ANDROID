@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">park</string>
+    <string name="display">Display</string>
+    <string name="insert">Insert</string>
+    <string name="parking_space_name">Parking Space Name</string>
+    <string name="number_of_spaces">Number of Spaces</string>
+    <string name="submit">Submit</string>
+    <string name="select_image">Select Image</string>
+    <string name="name_of_place">Name of Place</string>
+    <string name="img">Image</string>
+    <string name="tsp">Total Space</string>
+    <string name="type">Type</string>
+    <string name="type_of_space">Type of Space</string>
+</resources>
